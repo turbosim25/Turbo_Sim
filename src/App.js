@@ -1,5 +1,6 @@
 
 import React from "react";
+
 import AppRoutes from "./AppRoutes";
 import { AuthContextProvider } from "./context/AuthContext";
 
