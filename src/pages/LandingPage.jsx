@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 export default function LandingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-r from-slate-900 to-gray-800 text-white">
-      <Navbar />
+      {/* <Navbar /> */}
 
       <section className="text-center py-24 px-6">
         <h2 className="text-4xl md:text-6xl font-extrabold mb-6">HPC & Quantum Simulations in the Cloud</h2>
