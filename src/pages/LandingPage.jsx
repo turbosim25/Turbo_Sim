@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import { useAuth } from "../context/AuthContext";
 
 export default function LandingPage() {
+  const { user } = useAuth();
   return (
     <div className="min-h-screen bg-gradient-to-r from-slate-900 to-gray-800 text-white">
       {/* <Navbar /> */}
@@ -12,9 +14,16 @@ export default function LandingPage() {
         <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
           TurboSim.ai helps students, researchers, and enterprises run scalable simulations with zero infrastructure overhead.
         </p>
-        <Link to="/signup" className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg">
-          Get Started
-        </Link>
+        
+        {user && user.email ? (
+          <Link to="/homepage" className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg">
+            Get Started
+          </Link>
+        ) : (
+          <Link to="/signup" className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-2xl shadow-lg">
+            Get Started
+          </Link>
+        )}
       </section>
 
       <section id="features" className="py-20 px-6 bg-slate-950">

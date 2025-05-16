@@ -13,7 +13,7 @@ export default function SignUp() {
     e.preventDefault();
     try {
       await signup(email, password);
-      navigate("/dashboard");
+      navigate("/homepage");
     } catch (err) {
       setError("Sign up failed. Please try again.");
     }
