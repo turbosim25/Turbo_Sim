@@ -29,24 +29,23 @@ export default function Navbar() {
   return (
     <nav
       className="flex justify-between items-center px-8 py-4 bg-black text-purple-900 shadow-lg sticky top-0 z-50"
-      style={textBorderStyle}
     >
       <div className="flex items-center space-x-8">
         <Link
           to="/"
           className={`text-4xl font-extrabold tracking-widest transition duration-300 transform hover:scale-110 px-3 py-1 border-2 rounded-md ${
-            isActive("/") ? "text-purple-700 border-purple-700" : "text-purple-900 hover:text-purple-700 border-transparent"
+            isActive("/") ? "text-purple-700 border-purple-700" : "text-purple-700 border-purple-700"
           }`}
           style={textBorderStyle}
         >
-          TurboSim.ai
+          TurboSim.ai 
         </Link>
         {user && (
           <>
             <Link
               to="/homepage"
               className={`transition duration-300 hover:underline hover:text-purple-700 ${
-                isActive("/homepage") ? "text-purple-700 underline underline-offset-4 font-semibold" : "text-purple-900"
+                isActive("/homepage") ? "text-purple-700  underline-offset-4 font-semibold" : "text-purple-700  underline-offset-4 font-semibold"
               }`}
               style={textBorderStyle}
             >
@@ -57,7 +56,7 @@ export default function Navbar() {
                 <Link
                   to="/feature1"
                   className={`transition duration-300 hover:underline hover:text-purple-700 ${
-                    isActive("/feature1") ? "text-purple-700 underline underline-offset-4 font-semibold" : "text-purple-900"
+                    isActive("/feature1") ? "text-purple-700  underline-offset-4 font-semibold" : "text-purple-700  underline-offset-4 font-semibold"
                   }`}
                   style={textBorderStyle}
                 >
@@ -66,7 +65,7 @@ export default function Navbar() {
                 <Link
                   to="/feature2"
                   className={`transition duration-300 hover:underline hover:text-purple-700 ${
-                    isActive("/feature2") ? "text-purple-700 underline underline-offset-4 font-semibold" : "text-purple-900"
+                    isActive("/feature2") ? "text-purple-700  underline-offset-4 font-semibold" : "text-purple-700  underline-offset-4 font-semibold"
                   }`}
                   style={textBorderStyle}
                 >
@@ -77,14 +76,13 @@ export default function Navbar() {
           </>
         )}
       </div>
-      <div className="flex items-center space-x-8" style={textBorderStyle}>
+      <div className="flex items-center space-x-8">
         {user ? (
           <>
-            <span className="font-semibold animate-pulse">Hello, {user.email}</span>
+            <span className="text-purple-700 font-semibold" style={{ textShadow: 'none' }}>Hello, {user.email}</span>
             <button
               onClick={handleLogout}
               className="bg-purple-700 text-black font-bold py-2 px-5 rounded-lg shadow-lg hover:bg-purple-600 hover:scale-105 transition transform duration-300"
-              style={textBorderStyle}
             >
               Logout
             </button>
@@ -94,14 +92,12 @@ export default function Navbar() {
             <Link
               to="/login"
               className="bg-purple-900 hover:bg-purple-800 text-purple-300 font-semibold py-2 px-5 rounded-lg shadow-lg transition transform duration-300"
-              style={textBorderStyle}
             >
               Login
             </Link>
             <Link
               to="/signup"
               className="bg-purple-900 hover:bg-purple-800 text-purple-300 font-semibold py-2 px-5 rounded-lg shadow-lg transition transform duration-300"
-              style={textBorderStyle}
             >
               Sign Up
             </Link>
